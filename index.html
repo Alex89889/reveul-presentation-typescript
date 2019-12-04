@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides" >
+				<section data-background="#8f5177">
+					<h1>TypeScript<h1>
+				</section>
+				<section data-background="#8f5177">
+					<section>
+						<p>You’ve probably already heard the word “TypeScript” before.In 2018, TypeScript was the <b>7th most-used and the 3rd fastest-growing language on GitHub</b>, with over <b>5 million weekly downloads of its compiler</b>.</p>
+					</section>
+					<section>
+						<h2>What is TypeScript?</h2>
+						<p>TypeScript is an open-source programming language developed by Microsoft that compiles to JavaScript.</p>
+					</section>
+				</section>
+				<section data-background="#8f5177">
+					<h2>Who created it and why?</h2>
+					<p>TypeScript was <b>created by Microsoft</b> and was <b>released in 2012</b> after two years of development. It was created to allow for optional static type checking, which would be particularly useful when developing large scale applications.</p>
+				</section>
+				<section data-background="#8f5177">
+					<section>
+						<h2> How is TypeScript different from JavaScript?</h2>
+						<p>The most important difference between TypeScript and JavaScript is that they are <b>two separate programming languages, though TypeScript is heavily based on JavaScript</b>. In fact, TypeScript is a superset of JavaScript, meaning all valid JavaScript code is also valid TypeScript code.</p>
+					</section>
+					<section>
+					<p><b>Everything that can be written in JavaScript can also be written in TypeScript:</b></p>
+						<ul>
+							<li>frontend in any framework,</li>
+							<li>backend in Node.js,</li>
+							<li>cross-platform mobile apps in React Native.</li>
+						</ul>
+					</section>
+				</section>
+				<section data-background="#8f5177">
+				  <section>
+					<h2>How does TypeScript improve JavaScript?</h2>
+					<p><b>The key augmentation TypeScript brings to JavaScript is a type system</b> (hence the name “TypeScript”).</p>
+				  </section>
+				  <section>	
+					<p>Traditionally, JavaScript is <b>dynamically</b> typed (much like Python). This means that a single variable can either contain text, a number, or even a whole database entity, depending on the occasion—and that’s just fine. <b>What TypeScript does is strictly define what a given variable can contain.</b></p>
+				  </section>
+				</section>
+				<section data-background="#8f5177">
+				  <section>
+					<h2>Advantages of TypeScript</h2>
+					<p>Going into greater technical detail, TypeScript gives you:<p>
+					<p><b>1. Strict typing</b></p>
+					<p>Everything stays the way we define it. Need a variable to always be a number? It’ll always be a number, then.</p>
+				  </section>
+				  <section>
+					<p><b>2. Structural typing</b></p>
+					<p>Indispensable when you care about fully defining the actual structure you use. JavaScript allows for a lot of strange things to be done, so relying on a specific structure is a much safer solution.</p>
+					<p><b>3. Type annotations</b></p>
+					<p>A handy way of saying explicitly what type should be used.</p>
+				</section>
+				<section>
+					<p><b>4. Type inference</b></p>
+					<p>Implicit typing performed by TypeScript itself, so that your developers don’t need to provide types where the compiler can find them on its own.</p>
+				</section>
+				</section>
+				<section data-background="#8f5177">
+					<section>
+						<h2>Additional features of TypeScript</h2>
+						<p><b>TypeScript introduced a great deal of syntax taken from object-oriented programming, including but not limited to:</b></p>
+						<ul>
+							<li>interfaces</li>
+							<li>classes</li>
+							<li>enumerated types</li>
+							<li>generics</li>
+							<li>modules</li>
+						</ul>
+					</section>
+					<section>
+						<p>It’s true that ECMAScript 6 (or ECMAScript 2015) introduced some of those features to JavaScript—but not all of them. For instance, <b>abstract classes or access modifiers are still nowhere to be found in JavaScript, while TypeScript has them.</b></p>
+						<p>And the best part of being a superset of JavaScript? <b>Every new JavaScript feature is also a new TypeScript feature.</b></p>
+					</section>
+				</section>
+				<section data-background="#8f5177">
+					<h3>TypeScript is popular and trusted by the biggest players in the industry</h3>
+					<p>The language is widely used in software products such as <b>Slack, Asana, or Visual Studio Code</b>. What’s more, many great JavaScript tools are written in TypeScript, including frameworks (Angular, Aurelia, or Ionic) and libraries (ZoomCharts, yWorks, or GoJS).</p>
+				</section>
+				<section data-background="#8f5177">
+					<section>
+						<h2>What are some alternatives to TypeScript?</h2>
+						<p>1.<b>Flow</b>is also a superset of JavaScript, but it isn’t categorized as a separate language. Like TypeScript, Flow offers type annotations… and that’s pretty much it. No additional syntax, everything is the same as in JavaScript.</p>
+					</section>
+					<section>
+						<p>2. <b>JSDoc</b> is a living standard for documenting JavaScript code. It allows you to not only use text to write what each piece of code is doing, but also annotate types.</p>
+					</section>
+					<section>
+						<p>3. <b>Kotlin</b> has an official JavaScript compilation solution.</p>
+						<p>4 .<b>Rust</b> may work on the frontend; however, it doesn’t compile directly to JavaScript, but rather WebAssembly. </p>
+					</section>
+						
+					<section>
+						<p>5. <b>Go</b> can be effectively compiled either to JavaScript—via an unofficial tool called GopherJS—or to WebAssembly, much like Rust.</p>
+						<p>6. <b>Elm</b> and <b>Reason</b> were designed for JavaScript compilation.</p>
+					</section>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
