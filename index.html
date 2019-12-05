@@ -84,44 +84,87 @@
 				</section>
 				<section data-background="#8f5177">
 					<section>
-						<h2>Additional features of TypeScript</h2>
-						<p><b>TypeScript introduced a great deal of syntax taken from object-oriented programming, including but not limited to:</b></p>
-						<ul>
-							<li>interfaces</li>
-							<li>classes</li>
-							<li>enumerated types</li>
-							<li>generics</li>
-							<li>modules</li>
-						</ul>
-					</section>
-					<section>
-						<p>It’s true that ECMAScript 6 (or ECMAScript 2015) introduced some of those features to JavaScript—but not all of them. For instance, <b>abstract classes or access modifiers are still nowhere to be found in JavaScript, while TypeScript has them.</b></p>
-						<p>And the best part of being a superset of JavaScript? <b>Every new JavaScript feature is also a new TypeScript feature.</b></p>
-					</section>
-				</section>
-				<section data-background="#8f5177">
-					<h3>TypeScript is popular and trusted by the biggest players in the industry</h3>
-					<p>The language is widely used in software products such as <b>Slack, Asana, or Visual Studio Code</b>. What’s more, many great JavaScript tools are written in TypeScript, including frameworks (Angular, Aurelia, or Ionic) and libraries (ZoomCharts, yWorks, or GoJS).</p>
-				</section>
-				<section data-background="#8f5177">
-					<section>
-						<h2>What are some alternatives to TypeScript?</h2>
-						<p>1.<b>Flow</b>is also a superset of JavaScript, but it isn’t categorized as a separate language. Like TypeScript, Flow offers type annotations… and that’s pretty much it. No additional syntax, everything is the same as in JavaScript.</p>
-					</section>
-					<section>
-						<p>2. <b>JSDoc</b> is a living standard for documenting JavaScript code. It allows you to not only use text to write what each piece of code is doing, but also annotate types.</p>
-					</section>
-					<section>
-						<p>3. <b>Kotlin</b> has an official JavaScript compilation solution.</p>
-						<p>4 .<b>Rust</b> may work on the frontend; however, it doesn’t compile directly to JavaScript, but rather WebAssembly. </p>
-					</section>
-						
-					<section>
-						<p>5. <b>Go</b> can be effectively compiled either to JavaScript—via an unofficial tool called GopherJS—or to WebAssembly, much like Rust.</p>
-						<p>6. <b>Elm</b> and <b>Reason</b> were designed for JavaScript compilation.</p>
-					</section>
-				</section>
+						<h2>Features of TypeScript</h2>
+						<p><b>Interfaces</b></p>
+						<pre>interface LabeledValue {</br>
+    label: string;</br>
+}</br>
 
+function printLabel(labeledObj: LabeledValue) {</br>
+    console.log(labeledObj.label);</br>
+}</br>
+
+let myObj = {size: 10, label: "Size 10 Object"};</br>
+printLabel(myObj);</pre>
+					</section>
+					<section>
+						<p><b>Classes</b></p>
+						<pre>class Greeter {
+    greeting: string;
+    constructor(message: string) {
+        this.greeting = message;
+    }
+    greet() {
+        return "Hello, " + this.greeting;
+    }
+}
+
+let greeter = new Greeter("world");</pre>
+					</section>
+					<section>
+						<p><b>Enumerated types</b></p>
+						<p>As mentioned in our section on enums, enum members have types when every member is literal-initialized.</p>
+					</section>
+					<section>
+						<p><b>Generics</b></p>
+						<pre>function getArray(items : any[] ) : any[] {
+    return new Array().concat(items);
+}
+
+let myNumArr = getArray([100, 200, 300]);
+let myStrArr = getArray(["Hello", "World"]);
+
+myNumArr.push(400); // OK
+myStrArr.push("Hello TypeScript"); // OK
+
+myNumArr.push("Hi"); // OK
+myStrArr.push(500); // OK
+
+console.log(myNumArr); // [100, 200, 300, 400, "Hi"]
+console.log(myStrArr); // ["Hello", "World", "Hello TypeScript", 500]</pre>
+					</section>
+					<section>
+						<p><b>Modules</b></p>
+						<p>Modules are executed within their own scope, not in the global scope; this means that variables, functions, classes, etc. declared in a module are not visible outside the module unless they are explicitly exported using one of the export forms. Conversely, to consume a variable, function, class, interface, etc. exported from a different module, it has to be imported using one of the import forms.</p>
+					</section>
+				</section>
+				<section data-background="#8f5177">
+					<h2>There are two main ways to get the TypeScript tools:</h2>
+					<ul>
+						<li>Via npm (the Node.js package manager)</li>
+						<li>By installing TypeScript’s Visual Studio plugins</li>
+					</ul>
+					<p>For NPM users:</p>
+					<pre>npm install -g typescript</pre>
+				</section>
+				<section data-background="#8f5177">
+					<h2>Building your first TypeScript file</h2>
+					<p>In your editor, type the following JavaScript code in greeter.ts:</p>
+					<pre>function greeter(person) {
+    return "Hello, " + person;
+}
+
+var user = "Jane User";
+
+document.body.innerHTML = greeter(user);</pre>
+				</section>
+				<section data-background="#8f5177">
+					<h2>Compiling your code </h2>
+					<p>We used a .ts extension, but this code is just JavaScript. You could have copy/pasted this straight out of an existing JavaScript app.</p>
+					<p>At the command line, run the TypeScript compiler:</p>
+					<pre>tsc greeter.ts</pre>
+					<p>The result will be a file greeter.js which contains the same JavaScript that you fed in. We’re up and running using TypeScript in our JavaScript app!</p>
+				</section>
 			</div>
 		</div>
 
